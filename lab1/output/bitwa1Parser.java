@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/uml/Dokumenty/235031/lab1/bitwa1.g 2020-02-26 14:45:39
+// $ANTLR 3.5.1 /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g 2020-03-03 21:16:19
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -35,12 +35,12 @@ public class bitwa1Parser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "term", "atom", "plik", "expr"
+		"invalidRule", "plik", "atom", "term", "expr"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
 		false, // invalid decision
-		false, false, false, false, false, false, false, false
+		false, false, false, false, false, false
 	};
 
  
@@ -75,102 +75,71 @@ public class bitwa1Parser extends DebugParser {
 	}
 
 	@Override public String[] getTokenNames() { return bitwa1Parser.tokenNames; }
-	@Override public String getGrammarFileName() { return "/home/uml/Dokumenty/235031/lab1/bitwa1.g"; }
+	@Override public String getGrammarFileName() { return "/home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g"; }
+
+
+		class ZeroDivException extends RuntimeException {
+			ZeroDivException(){
+				System.out.println("Chłopie co ty robisz!!!");
+			}
+		}
 
 
 
 	// $ANTLR start "plik"
-	// /home/uml/Dokumenty/235031/lab1/bitwa1.g:3:1: plik : ( expr ( NL )+ )* EOF ;
+	// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:13:1: plik : ( expr )* EOF ;
 	public final void plik() throws RecognitionException {
 		ParserRuleReturnScope expr1 =null;
 
 		try { dbg.enterRule(getGrammarFileName(), "plik");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(3, 0);
+		dbg.location(13, 0);
 
 		try {
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:3:6: ( ( expr ( NL )+ )* EOF )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:13:6: ( ( expr )* EOF )
 			dbg.enterAlt(1);
 
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:3:8: ( expr ( NL )+ )* EOF
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:13:8: ( expr )* EOF
 			{
-			dbg.location(3,8);
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:3:8: ( expr ( NL )+ )*
-			try { dbg.enterSubRule(2);
+			dbg.location(13,8);
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:13:8: ( expr )*
+			try { dbg.enterSubRule(1);
 
-			loop2:
+			loop1:
 			while (true) {
-				int alt2=2;
-				try { dbg.enterDecision(2, decisionCanBacktrack[2]);
+				int alt1=2;
+				try { dbg.enterDecision(1, decisionCanBacktrack[1]);
 
-				int LA2_0 = input.LA(1);
-				if ( ((LA2_0 >= INT && LA2_0 <= LP)) ) {
-					alt2=1;
+				int LA1_0 = input.LA(1);
+				if ( ((LA1_0 >= INT && LA1_0 <= LP)) ) {
+					alt1=1;
 				}
 
-				} finally {dbg.exitDecision(2);}
+				} finally {dbg.exitDecision(1);}
 
-				switch (alt2) {
+				switch (alt1) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:3:9: expr ( NL )+
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:13:8: expr
 					{
-					dbg.location(3,9);
-					pushFollow(FOLLOW_expr_in_plik11);
+					dbg.location(13,8);
+					pushFollow(FOLLOW_expr_in_plik17);
 					expr1=expr();
 					state._fsp--;
-					dbg.location(3,14);
-					System.out.println((expr1!=null?input.toString(expr1.start,expr1.stop):null) + " = " + (expr1!=null?((bitwa1Parser.expr_return)expr1).res:null));dbg.location(3,68);
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:3:68: ( NL )+
-					int cnt1=0;
-					try { dbg.enterSubRule(1);
-
-					loop1:
-					while (true) {
-						int alt1=2;
-						try { dbg.enterDecision(1, decisionCanBacktrack[1]);
-
-						int LA1_0 = input.LA(1);
-						if ( (LA1_0==NL) ) {
-							alt1=1;
-						}
-
-						} finally {dbg.exitDecision(1);}
-
-						switch (alt1) {
-						case 1 :
-							dbg.enterAlt(1);
-
-							// /home/uml/Dokumenty/235031/lab1/bitwa1.g:3:68: NL
-							{
-							dbg.location(3,68);
-							match(input,NL,FOLLOW_NL_in_plik15); 
-							}
-							break;
-
-						default :
-							if ( cnt1 >= 1 ) break loop1;
-							EarlyExitException eee = new EarlyExitException(1, input);
-							dbg.recognitionException(eee);
-
-							throw eee;
-						}
-						cnt1++;
-					}
-					} finally {dbg.exitSubRule(1);}
 
 					}
 					break;
 
 				default :
-					break loop2;
+					break loop1;
 				}
 			}
-			} finally {dbg.exitSubRule(2);}
-			dbg.location(3,74);
-			match(input,EOF,FOLLOW_EOF_in_plik20); 
+			} finally {dbg.exitSubRule(1);}
+			dbg.location(13,14);
+			match(input,EOF,FOLLOW_EOF_in_plik20); dbg.location(13,18);
+			System.out.println("Result: " + (expr1!=null?input.toString(expr1.start,expr1.stop):null) + " = " + (expr1!=null?((bitwa1Parser.expr_return)expr1).value:0));
 			}
 
 		}
@@ -181,7 +150,7 @@ public class bitwa1Parser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(3, 76);
+		dbg.location(14, 1);
 
 		}
 		finally {
@@ -195,121 +164,121 @@ public class bitwa1Parser extends DebugParser {
 
 
 	public static class expr_return extends ParserRuleReturnScope {
-		public Integer res;
+		public int value;
 	};
 
 
 	// $ANTLR start "expr"
-	// /home/uml/Dokumenty/235031/lab1/bitwa1.g:5:3: expr returns [Integer res] : t1= term ( ( PLUS t2= term | MINUS t2= term ) )* ;
+	// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:16:1: expr returns [int value] : a= term ( ( PLUS b= term | MINUS b= term ) )* ;
 	public final bitwa1Parser.expr_return expr() throws RecognitionException {
 		bitwa1Parser.expr_return retval = new bitwa1Parser.expr_return();
 		retval.start = input.LT(1);
 
-		Integer t1 =null;
-		Integer t2 =null;
+		int a =0;
+		int b =0;
 
 		try { dbg.enterRule(getGrammarFileName(), "expr");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(5, 2);
+		dbg.location(16, 0);
 
 		try {
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:5:29: (t1= term ( ( PLUS t2= term | MINUS t2= term ) )* )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:16:24: (a= term ( ( PLUS b= term | MINUS b= term ) )* )
 			dbg.enterAlt(1);
 
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:6:3: t1= term ( ( PLUS t2= term | MINUS t2= term ) )*
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:17:2: a= term ( ( PLUS b= term | MINUS b= term ) )*
 			{
-			dbg.location(6,6);
+			dbg.location(17,4);
 			pushFollow(FOLLOW_term_in_expr40);
-			t1=term();
+			a=term();
 			state._fsp--;
-			dbg.location(6,13);
-			retval.res =t1;dbg.location(7,3);
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:7:3: ( ( PLUS t2= term | MINUS t2= term ) )*
-			try { dbg.enterSubRule(4);
+			dbg.location(17,11);
+			retval.value = a;dbg.location(18,2);
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:18:2: ( ( PLUS b= term | MINUS b= term ) )*
+			try { dbg.enterSubRule(3);
 
-			loop4:
+			loop3:
 			while (true) {
-				int alt4=2;
-				try { dbg.enterDecision(4, decisionCanBacktrack[4]);
+				int alt3=2;
+				try { dbg.enterDecision(3, decisionCanBacktrack[3]);
 
-				int LA4_0 = input.LA(1);
-				if ( (LA4_0==MINUS||LA4_0==PLUS) ) {
-					alt4=1;
+				int LA3_0 = input.LA(1);
+				if ( (LA3_0==MINUS||LA3_0==PLUS) ) {
+					alt3=1;
 				}
 
-				} finally {dbg.exitDecision(4);}
+				} finally {dbg.exitDecision(3);}
 
-				switch (alt4) {
+				switch (alt3) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:7:4: ( PLUS t2= term | MINUS t2= term )
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:18:3: ( PLUS b= term | MINUS b= term )
 					{
-					dbg.location(7,4);
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:7:4: ( PLUS t2= term | MINUS t2= term )
-					int alt3=2;
-					try { dbg.enterSubRule(3);
-					try { dbg.enterDecision(3, decisionCanBacktrack[3]);
+					dbg.location(18,3);
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:18:3: ( PLUS b= term | MINUS b= term )
+					int alt2=2;
+					try { dbg.enterSubRule(2);
+					try { dbg.enterDecision(2, decisionCanBacktrack[2]);
 
-					int LA3_0 = input.LA(1);
-					if ( (LA3_0==PLUS) ) {
-						alt3=1;
+					int LA2_0 = input.LA(1);
+					if ( (LA2_0==PLUS) ) {
+						alt2=1;
 					}
-					else if ( (LA3_0==MINUS) ) {
-						alt3=2;
+					else if ( (LA2_0==MINUS) ) {
+						alt2=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 3, 0, input);
+							new NoViableAltException("", 2, 0, input);
 						dbg.recognitionException(nvae);
 						throw nvae;
 					}
 
-					} finally {dbg.exitDecision(3);}
+					} finally {dbg.exitDecision(2);}
 
-					switch (alt3) {
+					switch (alt2) {
 						case 1 :
 							dbg.enterAlt(1);
 
-							// /home/uml/Dokumenty/235031/lab1/bitwa1.g:7:5: PLUS t2= term
+							// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:18:4: PLUS b= term
 							{
-							dbg.location(7,5);
-							match(input,PLUS,FOLLOW_PLUS_in_expr49); dbg.location(7,13);
-							pushFollow(FOLLOW_term_in_expr55);
-							t2=term();
+							dbg.location(18,4);
+							match(input,PLUS,FOLLOW_PLUS_in_expr47); dbg.location(18,11);
+							pushFollow(FOLLOW_term_in_expr53);
+							b=term();
 							state._fsp--;
-							dbg.location(7,20);
-							retval.res += t2;
+							dbg.location(18,18);
+							retval.value += b;
 							}
 							break;
 						case 2 :
 							dbg.enterAlt(2);
 
-							// /home/uml/Dokumenty/235031/lab1/bitwa1.g:7:41: MINUS t2= term
+							// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:19:4: MINUS b= term
 							{
-							dbg.location(7,41);
-							match(input,MINUS,FOLLOW_MINUS_in_expr61); dbg.location(7,50);
-							pushFollow(FOLLOW_term_in_expr67);
-							t2=term();
+							dbg.location(19,4);
+							match(input,MINUS,FOLLOW_MINUS_in_expr60); dbg.location(19,12);
+							pushFollow(FOLLOW_term_in_expr66);
+							b=term();
 							state._fsp--;
-							dbg.location(7,57);
-							retval.res -= t2;
+							dbg.location(19,19);
+							retval.value -= b;
 							}
 							break;
 
 					}
-					} finally {dbg.exitSubRule(3);}
+					} finally {dbg.exitSubRule(2);}
 
 					}
 					break;
 
 				default :
-					break loop4;
+					break loop3;
 				}
 			}
-			} finally {dbg.exitSubRule(4);}
+			} finally {dbg.exitSubRule(3);}
 
 			}
 
@@ -323,7 +292,7 @@ public class bitwa1Parser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(7, 77);
+		dbg.location(20, 1);
 
 		}
 		finally {
@@ -339,227 +308,119 @@ public class bitwa1Parser extends DebugParser {
 
 
 	// $ANTLR start "term"
-	// /home/uml/Dokumenty/235031/lab1/bitwa1.g:9:3: term returns [Integer res] : a1= atom ( ( MUL a2= atom | DIV a2= atom ({...}?|) ) )* ;
-	public final Integer term() throws RecognitionException {
-		Integer res = null;
+	// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:22:1: term returns [int value] : a= atom ( ( MUL b= atom | DIV b= atom ) )* ;
+	public final int term() throws RecognitionException {
+		int value = 0;
 
 
-		Integer a1 =null;
-		Integer a2 =null;
+		int a =0;
+		int b =0;
 
 		try { dbg.enterRule(getGrammarFileName(), "term");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(9, 2);
+		dbg.location(22, 0);
 
 		try {
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:9:30: (a1= atom ( ( MUL a2= atom | DIV a2= atom ({...}?|) ) )* )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:22:24: (a= atom ( ( MUL b= atom | DIV b= atom ) )* )
 			dbg.enterAlt(1);
 
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:10:3: a1= atom ( ( MUL a2= atom | DIV a2= atom ({...}?|) ) )*
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:23:2: a= atom ( ( MUL b= atom | DIV b= atom ) )*
 			{
-			dbg.location(10,6);
-			pushFollow(FOLLOW_atom_in_term95);
-			a1=atom();
+			dbg.location(23,4);
+			pushFollow(FOLLOW_atom_in_term89);
+			a=atom();
 			state._fsp--;
-			dbg.location(10,13);
-			res =a1;dbg.location(11,3);
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:11:3: ( ( MUL a2= atom | DIV a2= atom ({...}?|) ) )*
-			try { dbg.enterSubRule(7);
+			dbg.location(23,11);
+			value = a;dbg.location(24,2);
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:24:2: ( ( MUL b= atom | DIV b= atom ) )*
+			try { dbg.enterSubRule(5);
 
-			loop7:
+			loop5:
 			while (true) {
-				int alt7=2;
-				try { dbg.enterDecision(7, decisionCanBacktrack[7]);
+				int alt5=2;
+				try { dbg.enterDecision(5, decisionCanBacktrack[5]);
 
-				int LA7_0 = input.LA(1);
-				if ( (LA7_0==DIV||LA7_0==MUL) ) {
-					alt7=1;
+				int LA5_0 = input.LA(1);
+				if ( (LA5_0==DIV||LA5_0==MUL) ) {
+					alt5=1;
 				}
 
-				} finally {dbg.exitDecision(7);}
+				} finally {dbg.exitDecision(5);}
 
-				switch (alt7) {
+				switch (alt5) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:11:4: ( MUL a2= atom | DIV a2= atom ({...}?|) )
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:24:3: ( MUL b= atom | DIV b= atom )
 					{
-					dbg.location(11,4);
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:11:4: ( MUL a2= atom | DIV a2= atom ({...}?|) )
-					int alt6=2;
-					try { dbg.enterSubRule(6);
-					try { dbg.enterDecision(6, decisionCanBacktrack[6]);
+					dbg.location(24,3);
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:24:3: ( MUL b= atom | DIV b= atom )
+					int alt4=2;
+					try { dbg.enterSubRule(4);
+					try { dbg.enterDecision(4, decisionCanBacktrack[4]);
 
-					int LA6_0 = input.LA(1);
-					if ( (LA6_0==MUL) ) {
-						alt6=1;
+					int LA4_0 = input.LA(1);
+					if ( (LA4_0==MUL) ) {
+						alt4=1;
 					}
-					else if ( (LA6_0==DIV) ) {
-						alt6=2;
+					else if ( (LA4_0==DIV) ) {
+						alt4=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 6, 0, input);
+							new NoViableAltException("", 4, 0, input);
 						dbg.recognitionException(nvae);
 						throw nvae;
 					}
 
-					} finally {dbg.exitDecision(6);}
+					} finally {dbg.exitDecision(4);}
 
-					switch (alt6) {
+					switch (alt4) {
 						case 1 :
 							dbg.enterAlt(1);
 
-							// /home/uml/Dokumenty/235031/lab1/bitwa1.g:11:5: MUL a2= atom
+							// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:24:4: MUL b= atom
 							{
-							dbg.location(11,5);
-							match(input,MUL,FOLLOW_MUL_in_term104); dbg.location(11,12);
-							pushFollow(FOLLOW_atom_in_term110);
-							a2=atom();
+							dbg.location(24,4);
+							match(input,MUL,FOLLOW_MUL_in_term97); dbg.location(24,10);
+							pushFollow(FOLLOW_atom_in_term103);
+							b=atom();
 							state._fsp--;
-							dbg.location(11,19);
-							res *= a2;
+							dbg.location(24,17);
+							value *= b;
 							}
 							break;
 						case 2 :
 							dbg.enterAlt(2);
 
-							// /home/uml/Dokumenty/235031/lab1/bitwa1.g:12:5: DIV a2= atom ({...}?|)
+							// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:25:4: DIV b= atom
 							{
-							dbg.location(12,5);
-							match(input,DIV,FOLLOW_DIV_in_term119); dbg.location(12,11);
-							pushFollow(FOLLOW_atom_in_term124);
-							a2=atom();
+							dbg.location(25,4);
+							match(input,DIV,FOLLOW_DIV_in_term110); dbg.location(25,10);
+							pushFollow(FOLLOW_atom_in_term116);
+							b=atom();
 							state._fsp--;
-							dbg.location(12,17);
-							// /home/uml/Dokumenty/235031/lab1/bitwa1.g:12:17: ({...}?|)
-							int alt5=2;
-							try { dbg.enterSubRule(5);
-							try { dbg.enterDecision(5, decisionCanBacktrack[5]);
-
-							switch ( input.LA(1) ) {
-							case PLUS:
-								{
-								int LA5_1 = input.LA(2);
-								if ( (evalPredicate(a2 != 0,"a2 != 0")) ) {
-									alt5=1;
-								}
-								else if ( (true) ) {
-									alt5=2;
-								}
-
-								}
-								break;
-							case MINUS:
-								{
-								int LA5_2 = input.LA(2);
-								if ( (evalPredicate(a2 != 0,"a2 != 0")) ) {
-									alt5=1;
-								}
-								else if ( (true) ) {
-									alt5=2;
-								}
-
-								}
-								break;
-							case NL:
-								{
-								int LA5_3 = input.LA(2);
-								if ( (evalPredicate(a2 != 0,"a2 != 0")) ) {
-									alt5=1;
-								}
-								else if ( (true) ) {
-									alt5=2;
-								}
-
-								}
-								break;
-							case RP:
-								{
-								int LA5_4 = input.LA(2);
-								if ( (evalPredicate(a2 != 0,"a2 != 0")) ) {
-									alt5=1;
-								}
-								else if ( (true) ) {
-									alt5=2;
-								}
-
-								}
-								break;
-							case MUL:
-								{
-								int LA5_5 = input.LA(2);
-								if ( (evalPredicate(a2 != 0,"a2 != 0")) ) {
-									alt5=1;
-								}
-								else if ( (true) ) {
-									alt5=2;
-								}
-
-								}
-								break;
-							case DIV:
-								{
-								int LA5_6 = input.LA(2);
-								if ( (evalPredicate(a2 != 0,"a2 != 0")) ) {
-									alt5=1;
-								}
-								else if ( (true) ) {
-									alt5=2;
-								}
-
-								}
-								break;
-							default:
-								NoViableAltException nvae =
-									new NoViableAltException("", 5, 0, input);
-								dbg.recognitionException(nvae);
-								throw nvae;
-							}
-							} finally {dbg.exitDecision(5);}
-
-							switch (alt5) {
-								case 1 :
-									dbg.enterAlt(1);
-
-									// /home/uml/Dokumenty/235031/lab1/bitwa1.g:13:4: {...}?
-									{
-									dbg.location(13,4);
-									if ( !(evalPredicate(a2 != 0,"a2 != 0")) ) {
-										throw new FailedPredicateException(input, "term", "a2 != 0");
-									}dbg.location(14,4);
-									res  /= a2;
-									}
-									break;
-								case 2 :
-									dbg.enterAlt(2);
-
-									// /home/uml/Dokumenty/235031/lab1/bitwa1.g:15:6: 
-									{
-									dbg.location(15,6);
-									System.out.println("test");
-									}
-									break;
-
-							}
-							} finally {dbg.exitSubRule(5);}
-
+							dbg.location(25,17);
+							 if(b == 0) 
+											throw new ZeroDivException();  
+										value /= b;
+								
 							}
 							break;
 
 					}
-					} finally {dbg.exitSubRule(6);}
+					} finally {dbg.exitSubRule(4);}
 
 					}
 					break;
 
 				default :
-					break loop7;
+					break loop5;
 				}
 			}
-			} finally {dbg.exitSubRule(7);}
+			} finally {dbg.exitSubRule(5);}
 
 			}
 
@@ -571,7 +432,7 @@ public class bitwa1Parser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(16, 7);
+		dbg.location(29, 1);
 
 		}
 		finally {
@@ -580,16 +441,16 @@ public class bitwa1Parser extends DebugParser {
 			if ( getRuleLevel()==0 ) {dbg.terminate();}
 		}
 
-		return res;
+		return value;
 	}
 	// $ANTLR end "term"
 
 
 
 	// $ANTLR start "atom"
-	// /home/uml/Dokumenty/235031/lab1/bitwa1.g:18:3: atom returns [Integer res] : ( INT | LP expr RP );
-	public final Integer atom() throws RecognitionException {
-		Integer res = null;
+	// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:31:1: atom returns [int value] : ( INT | LP expr RP );
+	public final int atom() throws RecognitionException {
+		int value = 0;
 
 
 		Token INT2=null;
@@ -598,54 +459,54 @@ public class bitwa1Parser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "atom");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(18, 2);
+		dbg.location(31, 0);
 
 		try {
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:18:29: ( INT | LP expr RP )
-			int alt8=2;
-			try { dbg.enterDecision(8, decisionCanBacktrack[8]);
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:31:24: ( INT | LP expr RP )
+			int alt6=2;
+			try { dbg.enterDecision(6, decisionCanBacktrack[6]);
 
-			int LA8_0 = input.LA(1);
-			if ( (LA8_0==INT) ) {
-				alt8=1;
+			int LA6_0 = input.LA(1);
+			if ( (LA6_0==INT) ) {
+				alt6=1;
 			}
-			else if ( (LA8_0==LP) ) {
-				alt8=2;
+			else if ( (LA6_0==LP) ) {
+				alt6=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 8, 0, input);
+					new NoViableAltException("", 6, 0, input);
 				dbg.recognitionException(nvae);
 				throw nvae;
 			}
 
-			} finally {dbg.exitDecision(8);}
+			} finally {dbg.exitDecision(6);}
 
-			switch (alt8) {
+			switch (alt6) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:19:3: INT
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:32:2: INT
 					{
-					dbg.location(19,3);
-					INT2=(Token)match(input,INT,FOLLOW_INT_in_atom168); dbg.location(19,7);
-					 res = Integer.parseInt((INT2!=null?INT2.getText():null));
+					dbg.location(32,2);
+					INT2=(Token)match(input,INT,FOLLOW_INT_in_atom135); dbg.location(32,6);
+					value = Integer.parseInt((INT2!=null?INT2.getText():null));
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:20:5: LP expr RP
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:33:4: LP expr RP
 					{
-					dbg.location(20,5);
-					match(input,LP,FOLLOW_LP_in_atom177); dbg.location(20,8);
-					pushFollow(FOLLOW_expr_in_atom179);
+					dbg.location(33,4);
+					match(input,LP,FOLLOW_LP_in_atom143); dbg.location(33,7);
+					pushFollow(FOLLOW_expr_in_atom145);
 					expr3=expr();
 					state._fsp--;
-					dbg.location(20,13);
-					match(input,RP,FOLLOW_RP_in_atom181); dbg.location(20,16);
-					res = (expr3!=null?((bitwa1Parser.expr_return)expr3).res:null);
+					dbg.location(33,12);
+					match(input,RP,FOLLOW_RP_in_atom147); dbg.location(33,15);
+					value = (expr3!=null?((bitwa1Parser.expr_return)expr3).value:0);
 					}
 					break;
 
@@ -658,7 +519,7 @@ public class bitwa1Parser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(21, 2);
+		dbg.location(34, 1);
 
 		}
 		finally {
@@ -667,7 +528,7 @@ public class bitwa1Parser extends DebugParser {
 			if ( getRuleLevel()==0 ) {dbg.terminate();}
 		}
 
-		return res;
+		return value;
 	}
 	// $ANTLR end "atom"
 
@@ -675,21 +536,20 @@ public class bitwa1Parser extends DebugParser {
 
 
 
-	public static final BitSet FOLLOW_expr_in_plik11 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_NL_in_plik15 = new BitSet(new long[]{0x0000000000000980L});
+	public static final BitSet FOLLOW_expr_in_plik17 = new BitSet(new long[]{0x0000000000000180L});
 	public static final BitSet FOLLOW_EOF_in_plik20 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_term_in_expr40 = new BitSet(new long[]{0x0000000000001202L});
-	public static final BitSet FOLLOW_PLUS_in_expr49 = new BitSet(new long[]{0x0000000000000180L});
-	public static final BitSet FOLLOW_term_in_expr55 = new BitSet(new long[]{0x0000000000001202L});
-	public static final BitSet FOLLOW_MINUS_in_expr61 = new BitSet(new long[]{0x0000000000000180L});
-	public static final BitSet FOLLOW_term_in_expr67 = new BitSet(new long[]{0x0000000000001202L});
-	public static final BitSet FOLLOW_atom_in_term95 = new BitSet(new long[]{0x0000000000000422L});
-	public static final BitSet FOLLOW_MUL_in_term104 = new BitSet(new long[]{0x0000000000000180L});
-	public static final BitSet FOLLOW_atom_in_term110 = new BitSet(new long[]{0x0000000000000422L});
-	public static final BitSet FOLLOW_DIV_in_term119 = new BitSet(new long[]{0x0000000000000180L});
-	public static final BitSet FOLLOW_atom_in_term124 = new BitSet(new long[]{0x0000000000000422L});
-	public static final BitSet FOLLOW_INT_in_atom168 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LP_in_atom177 = new BitSet(new long[]{0x0000000000000180L});
-	public static final BitSet FOLLOW_expr_in_atom179 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_RP_in_atom181 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_PLUS_in_expr47 = new BitSet(new long[]{0x0000000000000180L});
+	public static final BitSet FOLLOW_term_in_expr53 = new BitSet(new long[]{0x0000000000001202L});
+	public static final BitSet FOLLOW_MINUS_in_expr60 = new BitSet(new long[]{0x0000000000000180L});
+	public static final BitSet FOLLOW_term_in_expr66 = new BitSet(new long[]{0x0000000000001202L});
+	public static final BitSet FOLLOW_atom_in_term89 = new BitSet(new long[]{0x0000000000000422L});
+	public static final BitSet FOLLOW_MUL_in_term97 = new BitSet(new long[]{0x0000000000000180L});
+	public static final BitSet FOLLOW_atom_in_term103 = new BitSet(new long[]{0x0000000000000422L});
+	public static final BitSet FOLLOW_DIV_in_term110 = new BitSet(new long[]{0x0000000000000180L});
+	public static final BitSet FOLLOW_atom_in_term116 = new BitSet(new long[]{0x0000000000000422L});
+	public static final BitSet FOLLOW_INT_in_atom135 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LP_in_atom143 = new BitSet(new long[]{0x0000000000000180L});
+	public static final BitSet FOLLOW_expr_in_atom145 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_RP_in_atom147 = new BitSet(new long[]{0x0000000000000002L});
 }

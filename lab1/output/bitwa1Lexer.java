@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/uml/Dokumenty/235031/lab1/bitwa1.g 2020-02-26 14:45:39
+// $ANTLR 3.5.1 /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g 2020-03-03 21:16:19
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -33,15 +33,15 @@ public class bitwa1Lexer extends Lexer {
 	public bitwa1Lexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "/home/uml/Dokumenty/235031/lab1/bitwa1.g"; }
+	@Override public String getGrammarFileName() { return "/home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g"; }
 
 	// $ANTLR start "ID"
 	public final void mID() throws RecognitionException {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:23:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:23:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:38:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:38:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -51,7 +51,7 @@ public class bitwa1Lexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:23:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:38:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -62,7 +62,7 @@ public class bitwa1Lexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -96,10 +96,10 @@ public class bitwa1Lexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:26:5: ( ( '0' .. '9' )+ )
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:26:7: ( '0' .. '9' )+
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:41:5: ( ( '0' .. '9' )+ )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:41:7: ( '0' .. '9' )+
 			{
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:26:7: ( '0' .. '9' )+
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:41:7: ( '0' .. '9' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -111,7 +111,7 @@ public class bitwa1Lexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -148,7 +148,7 @@ public class bitwa1Lexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:30:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:45:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			int alt6=2;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0=='/') ) {
@@ -182,11 +182,11 @@ public class bitwa1Lexer extends Lexer {
 
 			switch (alt6) {
 				case 1 :
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:30:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:45:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 					{
 					match("//"); 
 
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:30:14: (~ ( '\\n' | '\\r' ) )*
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:45:14: (~ ( '\\n' | '\\r' ) )*
 					loop3:
 					while (true) {
 						int alt3=2;
@@ -197,7 +197,7 @@ public class bitwa1Lexer extends Lexer {
 
 						switch (alt3) {
 						case 1 :
-							// /home/uml/Dokumenty/235031/lab1/bitwa1.g:
+							// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:
 							{
 							if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
 								input.consume();
@@ -215,7 +215,7 @@ public class bitwa1Lexer extends Lexer {
 						}
 					}
 
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:30:28: ( '\\r' )?
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:45:28: ( '\\r' )?
 					int alt4=2;
 					int LA4_0 = input.LA(1);
 					if ( (LA4_0=='\r') ) {
@@ -223,7 +223,7 @@ public class bitwa1Lexer extends Lexer {
 					}
 					switch (alt4) {
 						case 1 :
-							// /home/uml/Dokumenty/235031/lab1/bitwa1.g:30:28: '\\r'
+							// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:45:28: '\\r'
 							{
 							match('\r'); 
 							}
@@ -236,11 +236,11 @@ public class bitwa1Lexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:31:9: '/*' ( options {greedy=false; } : . )* '*/'
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:46:9: '/*' ( options {greedy=false; } : . )* '*/'
 					{
 					match("/*"); 
 
-					// /home/uml/Dokumenty/235031/lab1/bitwa1.g:31:14: ( options {greedy=false; } : . )*
+					// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:46:14: ( options {greedy=false; } : . )*
 					loop5:
 					while (true) {
 						int alt5=2;
@@ -261,7 +261,7 @@ public class bitwa1Lexer extends Lexer {
 
 						switch (alt5) {
 						case 1 :
-							// /home/uml/Dokumenty/235031/lab1/bitwa1.g:31:42: .
+							// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:46:42: .
 							{
 							matchAny(); 
 							}
@@ -293,8 +293,8 @@ public class bitwa1Lexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:34:5: ( ( ' ' | '\\t' | '\\r' ) )
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:34:9: ( ' ' | '\\t' | '\\r' )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:49:5: ( ( ' ' | '\\t' | '\\r' ) )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:49:9: ( ' ' | '\\t' | '\\r' )
 			{
 			if ( input.LA(1)=='\t'||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -321,8 +321,8 @@ public class bitwa1Lexer extends Lexer {
 		try {
 			int _type = PLUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:40:6: ( '+' )
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:40:8: '+'
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:55:7: ( '+' )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:55:9: '+'
 			{
 			match('+'); 
 			}
@@ -341,8 +341,8 @@ public class bitwa1Lexer extends Lexer {
 		try {
 			int _type = MINUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:43:7: ( '-' )
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:43:9: '-'
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:56:7: ( '-' )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:56:9: '-'
 			{
 			match('-'); 
 			}
@@ -356,33 +356,13 @@ public class bitwa1Lexer extends Lexer {
 	}
 	// $ANTLR end "MINUS"
 
-	// $ANTLR start "NL"
-	public final void mNL() throws RecognitionException {
-		try {
-			int _type = NL;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:46:4: ( '\\n' )
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:46:6: '\\n'
-			{
-			match('\n'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "NL"
-
 	// $ANTLR start "MUL"
 	public final void mMUL() throws RecognitionException {
 		try {
 			int _type = MUL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:49:5: ( '*' )
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:49:7: '*'
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:57:5: ( '*' )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:57:7: '*'
 			{
 			match('*'); 
 			}
@@ -401,8 +381,8 @@ public class bitwa1Lexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:52:5: ( '/' )
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:52:7: '/'
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:58:5: ( '/' )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:58:7: '/'
 			{
 			match('/'); 
 			}
@@ -416,13 +396,33 @@ public class bitwa1Lexer extends Lexer {
 	}
 	// $ANTLR end "DIV"
 
+	// $ANTLR start "NL"
+	public final void mNL() throws RecognitionException {
+		try {
+			int _type = NL;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:59:4: ( '\\n' )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:59:6: '\\n'
+			{
+			match('\n'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "NL"
+
 	// $ANTLR start "LP"
 	public final void mLP() throws RecognitionException {
 		try {
 			int _type = LP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:54:4: ( '(' )
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:54:6: '('
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:60:4: ( '(' )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:60:6: '('
 			{
 			match('('); 
 			}
@@ -441,8 +441,8 @@ public class bitwa1Lexer extends Lexer {
 		try {
 			int _type = RP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:57:4: ( ')' )
-			// /home/uml/Dokumenty/235031/lab1/bitwa1.g:57:6: ')'
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:61:4: ( ')' )
+			// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:61:6: ')'
 			{
 			match(')'); 
 			}
@@ -458,7 +458,7 @@ public class bitwa1Lexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:8: ( ID | INT | COMMENT | WS | PLUS | MINUS | NL | MUL | DIV | LP | RP )
+		// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:8: ( ID | INT | COMMENT | WS | PLUS | MINUS | MUL | DIV | NL | LP | RP )
 		int alt7=11;
 		switch ( input.LA(1) ) {
 		case 'A':
@@ -540,7 +540,7 @@ public class bitwa1Lexer extends Lexer {
 			}
 
 			else {
-				alt7=9;
+				alt7=8;
 			}
 
 			}
@@ -562,14 +562,14 @@ public class bitwa1Lexer extends Lexer {
 			alt7=6;
 			}
 			break;
-		case '\n':
+		case '*':
 			{
 			alt7=7;
 			}
 			break;
-		case '*':
+		case '\n':
 			{
-			alt7=8;
+			alt7=9;
 			}
 			break;
 		case '(':
@@ -589,77 +589,77 @@ public class bitwa1Lexer extends Lexer {
 		}
 		switch (alt7) {
 			case 1 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:10: ID
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:10: ID
 				{
 				mID(); 
 
 				}
 				break;
 			case 2 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:13: INT
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:13: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 3 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:17: COMMENT
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:17: COMMENT
 				{
 				mCOMMENT(); 
 
 				}
 				break;
 			case 4 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:25: WS
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:25: WS
 				{
 				mWS(); 
 
 				}
 				break;
 			case 5 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:28: PLUS
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:28: PLUS
 				{
 				mPLUS(); 
 
 				}
 				break;
 			case 6 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:33: MINUS
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:33: MINUS
 				{
 				mMINUS(); 
 
 				}
 				break;
 			case 7 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:39: NL
-				{
-				mNL(); 
-
-				}
-				break;
-			case 8 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:42: MUL
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:39: MUL
 				{
 				mMUL(); 
 
 				}
 				break;
-			case 9 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:46: DIV
+			case 8 :
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:43: DIV
 				{
 				mDIV(); 
 
 				}
 				break;
+			case 9 :
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:47: NL
+				{
+				mNL(); 
+
+				}
+				break;
 			case 10 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:50: LP
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:50: LP
 				{
 				mLP(); 
 
 				}
 				break;
 			case 11 :
-				// /home/uml/Dokumenty/235031/lab1/bitwa1.g:1:53: RP
+				// /home/student/Pulpit/MIASI/MIASI/lab1/bitwa1.g:1:53: RP
 				{
 				mRP(); 
 
